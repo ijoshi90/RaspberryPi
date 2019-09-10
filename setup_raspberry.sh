@@ -6,13 +6,13 @@
 # dos2unix				:	convert files from dos to unix format
 # synaptic 				:	packages
 # mlocate				:	locate files
-# tightvncserver		:	VNC Server for Raspberry Pi
+# tightvncserver			:	VNC Server for Raspberry Pi
 # mpg321				:	Media Playback package
 # filezilla				:	FTP, SFTP Client
 # vlc					:	VLC Media Player
 # rpi.gpio				:	GPio Package for programming
 # vsftpd				:	FTP server Package
-# libreoffice			:	Office
+# libreoffice				:	Office
 # python				:	python
 # synaptic				:	synaptic package manager
 #######################################################################
