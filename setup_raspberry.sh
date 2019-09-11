@@ -36,7 +36,7 @@ sleep 2
 
 ## Updating system ##
 echo "Updating the system"
-sudo apt-get update && apt-get upgrade
+echo Y | sudo apt-get update && apt-get upgrade
 echo ""
 
 ## Enable ssh to system
