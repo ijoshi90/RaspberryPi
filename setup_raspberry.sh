@@ -76,10 +76,10 @@ echo "List of installed packages"
 dpkg -l
 
 # If its in nespi case, then install scripts for nespi reset and power on / off buttons
-read -p "Type Y/y if you have a NesPi Case, else any other key : " isNesPi
+read -p "Type Y (or y) if you have a NesPi Case, else any other key : " isNesPi
 isNesPi=`echo $isNesPi |  tr '[:upper:]' '[:lower:]'`
 if [ $isNesPi == "y" ]; then
-	
+	sh nespi_case.sh
 fi
 
 # If nespi is not installed, Restart the system for the updates to take effect
