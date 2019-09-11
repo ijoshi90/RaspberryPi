@@ -76,11 +76,10 @@ echo "List of installed packages"
 dpkg -l
 
 # If its in nespi case, then install scripts for nespi reset and power on / off buttons
-if [ $1 == "nespi" ]; then
-	# NESPi Case - Shutdown & Reset Button Scripts
-	echo "Getting the latest safe shutdown script, this will reboot the system after install..."
-	sleep 3
-	wget -O - "https://raw.githubusercontent.com/RetroFlag/retroflag-picase/master/install.sh" | sudo bash
+read -p "Type Y/y if you have a NesPi Case, else any other key : " isNesPi
+isNesPi=`echo $isNesPi |  tr '[:upper:]' '[:lower:]'`
+if [ $isNesPi == "y" ]; then
+	
 fi
 
 # If nespi is not installed, Restart the system for the updates to take effect
