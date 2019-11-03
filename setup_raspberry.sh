@@ -59,7 +59,7 @@ do
 	echo "-------------------------------------"
 	echo "Now installing the package : $package"
 	sleep 2
-	sudo apt-get install $package
+	echo Y | sudo apt-get install $package
 	echo "Package $package is installed"
 	echo ""
 	sleep 2
@@ -70,13 +70,13 @@ echo ""
 echo "Updating the database..."
 sudo updatedb
 
-# List the packages currently installed
+clear
 echo ""
-echo "List of installed packages"
-dpkg -l
-
+echo ""
+echo "-------------------------------------"
 # If its in nespi case, then install scripts for nespi reset and power on / off buttons
 read -p "Type Y (or y) if you have a NesPi Case, else any other key : " isNesPi
+echo "-------------------------------------"
 isNesPi=`echo $isNesPi |  tr '[:upper:]' '[:lower:]'`
 if [ $isNesPi == "y" ]; then
 	sh nespi_case.sh
