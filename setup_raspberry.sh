@@ -1,23 +1,4 @@
 ﻿#!/bin/sh
-
-## Package Information ###############################################
-# vim					:	editor
-# samba					:	NFS
-# dos2unix				:	convert files from dos to unix format
-# sqlite3				:	SQL Database
-# synaptic 				:	packages
-# mlocate				:	locate files
-# tightvncserver			:	VNC Server for Raspberry Pi
-# mpg321				:	Media Playback package
-# filezilla				:	FTP, SFTP Client
-# vlc					:	VLC Media Player
-# rpi.gpio				:	GPio Package for programming
-# vsftpd				:	FTP server Package
-# libreoffice				:	Office
-# python				:	python
-# synaptic				:	synaptic package manager
-#######################################################################
-
 clear
 
 echo ""
@@ -48,9 +29,12 @@ echo ""
 #########################
 
 # Add the list of packages to be installed in space separated value
-packageList="vim vim-gtk samba samba-client samba-common samba-common-bin dos2unix sqlite3
-			synaptic mlocate tightvncserver mpg321 filezilla vlc rpi.gpio vsftpd
-			libreoffice python python-dev libjpeg-dev libfreetype6-dev python-setuptools python-pip"
+packageList="
+		vim vim-gtk samba samba-client samba-common samba-common-bin dos2unix sqlite3
+		synaptic mlocate tightvncserver mpg321 filezilla vlc rpi.gpio vsftpd libreoffice
+		python python-dev libjpeg-dev libfreetype6-dev python-setuptools python-pip
+		apache2 php
+		"
 
 # For each packahe in the list, install / update them one by one
 for package in $packageList
