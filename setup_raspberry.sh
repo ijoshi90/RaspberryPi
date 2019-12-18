@@ -67,7 +67,8 @@ if [ $isNesPi == "y" ]; then
 fi
 
 # If nespi is not installed, Restart the system for the updates to take effect
-echo "Initiating the system Reboot"
+echo "Initiating the system Reboot.."
+sleep 5
 clear
 sleep 5
 sudo reboot now
