@@ -1,3 +1,5 @@
 echo "Capturing photo..."
-raspistill -o /home/pi/Camera_Captures/`date +"%Y%m%d%H%M%S"`.jpg
-echo "Photo is saved as /home/pi/Camera_Captures/"
+imageName="/home/pi/Camera_Captures/`date +"%Y%m%d%H%M%S"`.jpg"
+#raspistill -o $imageName
+libcamera-still -r -o $imageName
+echo "Photo can be found here $imageName"
